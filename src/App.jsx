@@ -11,20 +11,22 @@ import "./index.css";
 
 export default function App() {
   useEffect(() => {
-    document.title = "Ragavendra Avula | Portfolio";
+    document.title = "Ragavendra Avula | DevOps Engineer";
   }, []);
 
   return (
     <Router>
-      <div className="bg-gray-950 text-white min-h-screen font-sans">
+      <div style={{ background: 'var(--dark-bg)', color: '#e2e8f0', minHeight: '100vh' }}>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <main style={{ position: 'relative', zIndex: 1 }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
         <Footer />
       </div>
     </Router>
